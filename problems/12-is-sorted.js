@@ -15,13 +15,9 @@ function isSorted(arr) {
   if (arr.length === 1) {
     return true;
   }
-  if (arr[0] < arr[1]) {
-    return isSorted(arr.slice(1))
-  } else {
-    return false;
-  }
-
+  return arr[0] < arr[1] ? isSorted(arr.slice(1)) : false;
 }
+
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

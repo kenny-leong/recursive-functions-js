@@ -45,5 +45,29 @@ function sort(nums, sorted = []) {
 
 
 
+// function isSorted(arr) {
+//     // Your code here
+//     //base case:
+//     if (arr.length <= 1) {
+//       return true;
+//     }
+//     //recursive step: compare last 2 while removing last element off arr
+//     else {
+//       lastEl = arr[arr.length - 1];
+//       arr.pop()
+//       //compare lastEl to new lastEl after using pop on arr to compare last 2 numbers of arr
+//       //return isSorted on new popped arr if they are sorted
+//       if (lastEl >= arr[arr.length - 1]) {
+//         return isSorted(arr);
+//       }
+//       //return false if they aren't sorted
+//       else {
+//         return false;
+//       }
+//     }
+//   }
+
+
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = sort;
