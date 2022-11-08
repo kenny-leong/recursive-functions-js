@@ -26,10 +26,6 @@ function flatten(arr, arr2 = []) {
   return flatten(arr.slice(1), arr2)
 }
 
-console.log(flatten([])) // []
-console.log(flatten([1, 2])) // [1, 2]
-console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
-
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
