@@ -13,9 +13,24 @@ iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
 
 
-function iceCreamShop(flavors, favorite) {
-  // Your code here
+function iceCreamShop(flavors, favorite, n=flavors.length) {
+  if (flavors[n]===favorite) {
+    console.log(true)
+    return true;
+  } else if (n <= -1) {
+    console.log(false)
+    return false;
+  }
+
+  return iceCreamShop(flavors, favorite, n-1);
 }
+
+iceCreamShop(['vanilla', 'strawberry'], 'blue moon'); // false
+iceCreamShop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea'); // true
+iceCreamShop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio'); // false
+iceCreamShop(['moose tracks'], 'moose tracks'); // true
+iceCreamShop([], 'honey lavender'); // false
+
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

@@ -11,9 +11,16 @@ sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
 
-function sumArray(arr) {
-
+function sumArray(arr, n=arr.length) {
+  if (n <= 0) {
+    return 0;
+  }
+  return sumArray(arr, n-1) + arr[n-1]
 }
+
+console.log(sumArray([1, 2, 3])); //  6
+
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
