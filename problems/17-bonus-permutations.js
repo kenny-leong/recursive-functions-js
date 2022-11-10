@@ -13,7 +13,25 @@ permutations([1, 2, 3]) // [[1, 2, 3], [1, 3, 2],
 ***********************************************************************/
 
 const permutations = (array) => {
-  // Your code here
+  if (array.length <= 1) return [array];
+
+  let first = array.shift();
+  let perms = permutations(array);
+  let allPerms = [];
+
+  for (let i = 0; i < perms.length; i++) {
+    subPerm = perms[i];
+
+    for (let j = 0; j <= subPerm.length; j++) {
+      let left = subPerm.slice(0, j);
+      let mid = [first];
+      let right = subPerm.slice(j);
+
+      allPerms.push(left.concat(mid).concat(right));
+    }
+  }
+
+  return allPerms;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
